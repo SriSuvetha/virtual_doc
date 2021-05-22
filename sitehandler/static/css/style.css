@@ -1,0 +1,108 @@
+.header {
+  background-color:rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  text-align: center;
+
+}
+h1{
+   color: white;
+}
+
+.topnav a:hover  {
+  background-color: #ddd;
+  color: white; 
+}
+
+img {
+  width: 100%;
+  height:100%;
+}
+img.two {
+  height: 50%;
+  width: 50%;
+}
+
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+  padding: 10px;
+
+
+ 
+}
+
+.column {
+  float: left;
+  width: 48%;
+  padding: 15px;
+
+  
+
+}
+footer {
+  background-color:rgba(0, 0, 0, 0.8);
+  padding: 35px;
+  text-align: center;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: hsl(199, 81%, 80%);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+
+    background-color: #ddd;
+}
+
+.container {
+  border-radius: 5px;
+
+  padding: 20px;
+}
+#status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+#status.success {
+  background-color: rgb(211, 250, 153);
+  animation: status 4s ease forwards;
+}
+#status.error {
+  background-color: rgb(250, 129, 92);
+  color: white;
+  animation: status 4s ease forwards;
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

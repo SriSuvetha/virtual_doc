@@ -1,0 +1,89 @@
+
+
+<head>
+    <meta charset ="UTF-8">
+    <title>HOME PAGE</title>
+    {% load static %}
+    {% include 'include.html' %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"> 
+    <link href="{% static 'css/socialmedia.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+{% block body %}
+<body>
+<div class="header">
+    <h1>Virtual Doc</h1>
+  
+</div>
+
+{% include 'navbar.html' %}
+<div class="center">
+<img src="{% static 'img/virtual doc.jpg' %} ">
+</div>
+
+
+<div class="row">
+  <div class="column">
+    <h1 style="color:black;text-align:center;">About Us</h1>
+
+  </div>
+  
+  <div class="column">
+    
+    <p style="font-size: 20;text-align:center;">Virtual doc is a national wide user friendly application ,the main goal is to develop a telehealth system which means delivery and facilitation of health and health related services including medical care, health information services and self care via telecommunication and digital communication technologies like live video conferencing to the rural and general people who lack the basic health requirements, and the reports of the patients will be maintained automatically through this platform.
+    </p>
+  </div>
+
+</div>
+<footer>
+    <div class="row">
+         <div class="column">
+           
+            <h1 style="text-align: center;">Contact Us</h1>
+            <a href="https://www.instagram.com/suvetha_senthilkumar/" class="fa fa-instagram"></a>
+            <a href="https://www.linkedin.com/in/srisuvetha/" class="fa fa-linkedin"></a>
+
+        </div>
+    <div class="column">
+    <form action="https://formspree.io/mbjzbwaj" method="POST" id="my-form">
+
+      
+
+   <div class="container">
+   <form action="https://formsubmit.co/srisuvetha@gmail.com" method="post" enctype="text/plain">
+    <label for="name" style="color:white;"> Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name..">
+
+    <label for="email" style="color:white;">Email id</label>
+    <input type="text" id="email" name="email" placeholder="Your Email id..">
+
+    <label for="country" style="color:white;">Country</label>
+    <select id="country" name="country" >
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+      <option value="usa">India</option>
+    </select>
+    <label for="name" style="color:white;"> City</label>
+    <input type="text" id="city" name="city" placeholder="Your city">
+
+    <label for="subject" style="color:white;">Comments</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea><br>
+    <br>
+    <button class="btn btn-primary btn-block" type="submit"  >Submit</button>
+  </form>
+
+
+    </div>
+       <div id="status"></div>
+    </div>
+</div>
+
+
+  
+</footer>
+
+{% endblock %}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+  <head>
+  <meta charset ="UTF-8">
+  <title>SIGNUP PAGE</title>
+  {% load static %}
+<link href="{% static 'css/style1.css' %}" rel="stylesheet"> 
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'fonts/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'fonts/ionicons.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/back-to-top-scroll-1.css' %}">
+<link rel="stylesheet" href="{% static 'css/back-to-top-scroll.cs' %}s">
+<link rel="stylesheet" href="{% static 'css/Bold-BS4-Animated-Back-To-Top.css' %}">
+<link rel="stylesheet" href="{% static 'css/cards.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link rel="stylesheet" href="{% static 'css/Login-Form-Dark.css' %}">
+<link rel="stylesheet" href="{% static 'css/Pretty-Registration-Form.css' %}">
+<link rel="stylesheet" href="{% static 'css/Sidebar-Menu-1.css' %}">
+<link rel="stylesheet" href="{% static 'css/Sidebar-Menu.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/back-to-top-scroll.js' %}"></script>
+<script src="{% static 'js/Bold-BS4-Animated-Back-To-Top.js' %}"></script>
+<script src="{% static 'js/bs-init.js' %}"></script>
+<script src="{% static 'js/Sidebar-Menu.js' %}"></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+</script>
+</head>
+  <body>
+
+  {% block body %}
+    <div class="bg-img">
+      <div class="content">
+        <header>Signup Form</header>
+        <form class="custom-form" style="margin-top: 0px;" method="POST">
+            {% csrf_token %}
+           
+            <div class="field">
+                <div class="col-sm-4 label-column">
+                    <label class="col-form-label" for="name-input-field">Name </label>
+                </div>
+                <div class="col-sm-6 input-column">
+                    <input class="form-control" type="text" name="name" required="">
+                </div>
+            </div><br>
+            <div class="field">
+                <div class="col-sm-4 label-column">
+                    <label class="col-form-label" for="email-input-field">Email </label>
+                </div>
+                <div class="col-sm-6 input-column">
+                    <input class="form-control" type="email" name="email" required="">
+                </div>
+            </div><br>
+            <div class="field">
+                <div class="col-sm-4 label-column">
+                    <label class="col-form-label" for="pawssword-input-field">Password </label>
+                </div>
+                <div class="col-sm-6 input-column">
+                    <input class="form-control" type="password" name="password" required="">
+                </div>
+            </div><br>
+            <div class="field">
+                <div class="col-sm-4 label-column">
+                    <label class="col-form-label" for="repeat-pawssword-input-field">Retype </label>
+                </div>
+                <div class="col-sm-6 input-column">
+                    <input class="form-control" type="password" name="repeatpassword" required="">
+                </div>
+            </div><br>
+            <div class="field">
+                <div class="col-sm-4 label-column">
+                    <label class="col-form-label" for="dropdown-input-field">Gender</label>
+                </div>
+                <div class="col-sm-6 input-column">
+                    <select class="form-control" name="gender" required="">
+                        <optgroup label="Select Gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div><br>
+            <div class="field">
+                <div class="col-sm-4 label-column">
+                    <label class="col-form-label" for="name-input-field">Phone </label>
+                </div>
+                <div class="col-sm-6 input-column">
+                    <input class="form-control" type="tel" name="phonenumber" required="">
+                </div>
+            </div><br>
+            <div class="field">
+                <div class="col-sm-4 label-column">
+                    <label class="col-form-label" for="name-input-field">Address</label>
+                </div>
+                <div class="col-sm-6 input-column">
+                    <textarea class="form-control" name="address" required=""></textarea>
+                </div>
+            </div><br>
+            <div class="field">
+                <div class="col-sm-4 label-column">
+                    <label class="col-form-label" for="name-input-field">Birth Date</label>
+                </div>
+                <div class="col-sm-6 input-column">
+                    <input class="form-control" type="date" name="dateofbirth" required="">
+                </div>
+            </div><br>
+            <div class="field">
+                <div class="col-sm-4 label-column">
+                    <label class="col-form-label" for="name-input-field">BloodGroup</label>
+                </div>
+                <div class="col-sm-6 input-column">
+                    <select class="form-control" name="bloodgroup" required="">
+                        <optgroup label="Choose Blood Group">
+                            <option value="O+" selected="">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div><br>
+            <button class="btn btn-primary submit-button" type="submit">Create Account</button>
+        </form>
+    </div>
+</div>
+<div class="scroll-top-wrapper"><span class="scroll-top-inner"><i class="fa fa-arrow-circle-up"></i></span></div>
+{% ifequal error "no" %}
+<script type="text/javascript">
+    alert('Patient saved Sucessfully..........')
+    window.location = ('{% url 'loginpage' %}')
+</script>
+{% endifequal%}
+
+{% ifequal error "yes" %}
+<script type="text/javascript">
+    /*alert('{{e}}')*/
+    alert('Email already exists....')
+</script>
+{% endifequal%}
+{% endblock %}

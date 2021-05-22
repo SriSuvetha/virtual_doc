@@ -1,0 +1,17 @@
+
+
+{% load static %}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+ <div class="w3-bar navbar w3-card" style="  background-color: rgba(0, 0, 0, 0.8); ">
+        <a class="w3-bar-item w3-button w3-padding-16 w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+
+    <div class="w3-hide-small">
+      <a href="{% url 'viewappointments' %}" class="w3-bar-item w3-button w3-padding-16">View Appointments</a>
+      <a href="{% url 'logout' %}"class="w3-bar-item w3-button w3-padding-16">Logout</a>
+   
+
+    </div>
+
+  </div>
